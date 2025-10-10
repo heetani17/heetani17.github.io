@@ -7,8 +7,7 @@ title: Home
   <h4>Bio</h4>
   <p>
     Welcome!<br>
-    I’m a <b>4th-year undergraduate</b> in EE at Yonsei University,<br>
-    working in the <a href="https://mics.yonsei.ac.kr/" target="_blank">MICS Lab</a> (advisor:
+    I’m a <b>4th-year undergraduate</b> in EE at Yonsei University, working in the <a href="https://mics.yonsei.ac.kr/" target="_blank">MICS Lab</a> (advisor:
     <a href="https://mics.yonsei.ac.kr/professor/" target="_blank">Prof. Byung-Wook Min</a>).<br>
     My research focuses on RF/microwave circuits and front-end systems.
   </p>
@@ -122,14 +121,139 @@ title: Home
 </div>
 -->
 
-<!-- ========== PROJECTS (NEW, SIMPLE TEXT) ========== -->
+<!-- ========== PROJECTS (image-left / text-right) ========== -->
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
-  <ul>
-    <li><b>1-bit GaAs HEMT Phase-Shifting Switch (7.5–8.5&nbsp;GHz, RIS)</b> — 180° phase shift with low IL; TR sizing & matching network optimization (ADS/HFSS/CST); measured prototype in progress.</li>
-    <li><b>Wideband Couplers & Beamforming Networks</b> — edge/broadside/GCPW couplers and Butler matrix exploration; wideband coupling/phase characteristics study.</li>
-    <li><b>DRAM Timing Study (LPDDR5X)</b> — JEDEC timing & bank-group constraints, WCK2CK synchronization notes; mapping and analysis.</li>
-  </ul>
+
+  <!-- 1) 1-bit RIS Switch -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/ris_switch_1bit/hero.jpg' | prepend: site.baseurl }}" alt="1-bit RIS phase-shifting switch">
+    </div>
+    <div class="eight columns">
+      <h5>1-bit Phase-Shifting Switch Module for Reconfigurable Intelligent Surfaces (RIS)</h5>
+      <p>
+        I led an undergraduate capstone on a 1-bit phase-shifting switch module for RIS, 
+        optimizing transistor sizing and matching networks to achieve low insertion loss and a stable 180° phase shift 
+        over a wide bandwidth. The work was recognized with an IEEE AP-S Undergraduate Research Scholarship 
+        and presented at KIEES (2025). 
+      </p>
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/ris_switch_1bit/poster.pdf' | prepend: site.baseurl }}" target="_blank">Poster (PDF)</a> -->
+        <!-- <a class="button" href="{{ '/assets/projects/ris_switch_1bit/slides.pdf' | prepend: site.baseurl }}" target="_blank">Slides</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2) 1.5/2-bit RIS Switch (In Progress) -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/ris_switch_multi_bit/hero.jpg' | prepend: site.baseurl }}" alt="1.5/2-bit RIS phase-shifting switch">
+    </div>
+    <div class="eight columns">
+      <h5>1.5- / 2-bit Phase-Shifting Switch Module for RIS (In Progress)</h5>
+      <p>
+        Building on the 1-bit design, I am extending the architecture to 1.5-/2-bit switching to reduce quantization loss 
+        and improve beam control. My current focus is comparing phase resolution, insertion loss, and implementation complexity 
+        to select a practical multi-bit topology for RIS front-ends. 
+      </p>
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/ris_switch_multi_bit/notes.pdf' | prepend: site.baseurl }}" target="_blank">Notes (PDF)</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3) Audio EQ -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/audio_eq/hero.jpg' | prepend: site.baseurl }}" alt="Audio equalizer">
+    </div>
+    <div class="eight columns">
+      <h5>Audio Equalizer Design</h5>
+      <p>
+        I built a multiband audio equalizer by composing LPF/BPF/HPF sections, a summing amplifier, and a push-pull output stage.
+        The circuit was verified in PSPICE and then prototyped on a breadboard with a volume controller for gain tuning and listening tests.
+      </p>
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/audio_eq/report.pdf' | prepend: site.baseurl }}" target="_blank">Report (PDF)</a> -->
+        <!-- <a class="button" href="https://github.com/heetani17/..." target="_blank">Code</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) IR Sensor PCB -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/ir_sensor/hero.jpg' | prepend: site.baseurl }}" alt="Infrared sensor PCB">
+    </div>
+    <div class="eight columns">
+      <h5>Infrared Sensor PCB Design</h5>
+      <p>
+        I designed and fabricated a compact IR-sensor board in Eagle CAD, creating custom libraries, 
+        completing schematic and layout, generating Gerber files, and assembling the prototype 
+        to validate the signal-conditioning chain. 
+      </p>
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/ir_sensor/schematic.pdf' | prepend: site.baseurl }}" target="_blank">Schematic</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5) FPGA Barnsley Fern -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/fern_fpga/hero.jpg' | prepend: site.baseurl }}" alt="FPGA Barnsley fern visualization">
+    </div>
+    <div class="eight columns">
+      <h5>FPGA-Based Barnsley Fern Visualization</h5>
+      <p>
+        I implemented Barnsley-fern fractals on a Pynq-Z2 using Verilog, driving an LCD via a VGA pipeline. 
+        An FSM varies the iteration count via buttons, and RGB pixel data are rendered from BRAM to achieve real-time visualization. 
+      </p>
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/fern_fpga/notes.pdf' | prepend: site.baseurl }}" target="_blank">Notes (PDF)</a> -->
+        <!-- <a class="button" href="https://github.com/heetani17/..." target="_blank">Code</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 6) Patch Antenna (Design Only) -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/patch_antenna/hero.jpg' | prepend: site.baseurl }}" alt="10 GHz patch antenna (design)">
+    </div>
+    <div class="eight columns">
+      <h5>Patch Antenna Design</h5>
+      <p>
+        I designed a 10-GHz microstrip patch antenna, progressing from CST EM modeling to Eagle CAD layout and adopting an
+        open-stub matching network to meet the return-loss target. Guided by CST simulations, I balanced gain, efficiency, footprint,
+        and matching (S11) to reach a practical design point.
+      </p>
+
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/patch_antenna/notes.pdf' | prepend: site.baseurl }}" target="_blank">Design Notes (PDF)</a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 7) Digital Sequential Circuits -->
+  <div class="row project-row">
+    <div class="four columns">
+      <img class="proj-hero" src="{{ '/assets/projects/digital_seq/hero.jpg' | prepend: site.baseurl }}" alt="Digital sequential circuits">
+    </div>
+    <div class="eight columns">
+      <h5>Digital Sequential Circuit Design: Vending Machine & 3-Way Traffic Light Controller</h5>
+      <p>
+        I implemented two sequential digital systems: a vending-machine controller (Moore FSM) and a T-junction traffic-light controller
+        (counter-based phases). Both were synthesized from K-maps to a PLA/D-flip-flop design and verified in simulation.
+      </p>
+
+      <div class="proj-buttons">
+        <!-- <a class="button" href="{{ '/assets/projects/digital_seq/report.pdf' | prepend: site.baseurl }}" target="_blank">Report (PDF)</a> -->
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- ========== (OLD CARD-STYLE PROJECTS: HIDDEN) ==========
