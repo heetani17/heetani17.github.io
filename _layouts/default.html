@@ -61,6 +61,12 @@
   <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
   <link rel="shortcut icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
 
+  <script defer src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+  <script defer>
+    window.addEventListener('DOMContentLoaded', function () {
+      twemoji.parse(document.body, { folder: 'svg', ext: '.svg' });
+    });
+  </script>
 </head>
 <body>
 

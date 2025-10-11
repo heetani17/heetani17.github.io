@@ -248,3 +248,6 @@ h4 {
 @media (max-width: 549px) {
   .project-row .four.columns { height: 220px; }
 }
+
+ul.interest-list { margin-top: .4rem; }
+ul.interest-list li { margin-bottom: .25rem; }
