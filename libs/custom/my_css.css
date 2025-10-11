@@ -195,45 +195,40 @@ h4 {
 /* Profile photo rounding */
 .header img.u-max-full-width { border-radius: 16px; }
 
-/* === Projects (clean, unified) ==================================== */
+/* === Projects (clean & unified) ==================================== */
 
-/* 카드 간 간격 (더 촘촘) */
+/* 카드 간 간격 (컴팩트) */
 .project-row {
-  margin-bottom: 16px;           /* ← 필요시 16~22px 사이로 조절 */
+  margin-bottom: 22px;                 /* 필요시 18~24px 범위에서 조절 */
 }
 
-/* 왼쪽 이미지 칼럼: 상단 정렬 + 고정 박스 높이(이미지 더 큼) */
+/* 왼쪽 썸네일 칼럼: 위쪽 정렬 */
 .project-row .four.columns {
   display: flex;
-  align-items: flex-start;        /* 이미지 윗줄 = 제목 윗줄 */
-  justify-content: center;
-  height: 280px;                  /* 더 크게 보이도록 280px */
+  align-items: flex-start;              /* 이미지 윗줄 = 제목 윗줄 */
 }
 
-/* 이미지: 잘림 없이 contain, 중앙 배치 */
+/* 썸네일: 고정 비율(4:3) + 레터박스(잘림 없음) */
 .proj-hero {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;            /* 크롭 방지 */
+  width: 100%;
+  aspect-ratio: 4 / 3;                  /* 모든 썸네일 높이 동일화 */
+  object-fit: contain;                  /* 잘림 방지 */
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,.06);
   display: block;
 }
 
-/* 제목: 가독성 폰트 + 상단 시작 정렬 */
+/* 제목: 가독성 폰트 + 상단 시작 */
 .project-row h5 {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0.01em;
   line-height: 1.25;
-  margin-top: 0;                  /* 상단 여백 제거 → 이미지 top과 맞춤 */
-  margin-bottom: 8px;
+  margin: 0 0 8px;                      /* 상단 0으로 이미지와 라인 맞춤 */
 }
 
-/* 버튼/텍스트 미세 정리 */
+/* 버튼 간 미세 간격 */
 .proj-buttons .button {
   margin-right: 8px;
   margin-top: 6px;
@@ -244,10 +239,11 @@ h4 {
   margin-bottom: 0;
 }
 
-/* 모바일에서는 이미지 박스 조금 낮춤 */
+/* 모바일: 카드 간격만 살짝 더 촘촘하게 */
 @media (max-width: 549px) {
-  .project-row .four.columns { height: 220px; }
+  .project-row { margin-bottom: 18px; }
 }
 
+/* === Bio: interests list spacing =================================== */
 ul.interest-list { margin-top: .4rem; }
 ul.interest-list li { margin-bottom: .25rem; }
