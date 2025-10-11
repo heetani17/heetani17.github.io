@@ -1,6 +1,7 @@
 source:      .
 destination: ./_site
 includes:    ./_includes
+url: "https://heetani17.github.io"
 baseurl: ""
 
 collections:
