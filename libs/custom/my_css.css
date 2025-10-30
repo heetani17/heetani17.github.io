@@ -247,3 +247,12 @@ h4 {
 /* === Bio: interests list spacing =================================== */
 ul.interest-list { margin-top: .4rem; }
 ul.interest-list li { margin-bottom: .25rem; }
+
+/* Project status line-break & style */
+.project-status{
+  display: block;         /* 줄바꿈 강제 */
+  font-weight: 600;
+  color: #4a4a4a;         /* 원하면 살짝 옅게 */
+  margin-top: 2px;        /* 제목과 간격 */
+  font-size: 0.95em;      /* 살짝 작게 (옵션) */
+}
